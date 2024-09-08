@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <link rel="icon" href="book.png" type="image/x-icon">
     <link rel="icon" sizes="32x32" href="book.png" type="image/png">
     <link rel="icon" sizes="96x96" href="book.png" type="image/png">
@@ -23,7 +23,7 @@
         </div>
         <div class="text-container">
             <h1 data-aos="fade-down" class="thunder-effect">Yash Kansara</h1>
-            
+
         </div>
 
         <nav>
@@ -51,7 +51,7 @@
     <div id="scroll-up" class="scroll-arrow">
         <img src="up-arrow.png" alt="Scroll Up">
     </div>
-    
+
 
 
 
@@ -61,8 +61,8 @@
             <div class="hero-banner">
                 <img src="pngwing.com (1).png" alt="Avengers Banner"> <!-- Replace with actual path -->
             </div>
-            <div class="Welcome">
-                <h2 class="thunder-effect1">Welcome  to  My  Portfolio</h2>
+            <div class="Welcome1">
+                <h2 class="thunder-effect1" data-aos="fade-left">Welcome to My Portfolio</h2>
                 <p>I am a dedicated software engineer with expertise in Python, OpenCV, YOLO, C++, and web technologies.
                     I developed my skills through projects like "EduIndian" and internships at Prodigy Infotech. I
                     thrive on creating impactful solutions and participating in hackathons.</p>
@@ -83,27 +83,35 @@
             <h2 class="thunder-effect1">My Projects</h2>
             <div class="projects-grid">
                 <div class="project" data-aos="zoom-in">
-                    <img src="ironman logo.png" alt="Project 1"> <!-- Replace with actual path -->
+                    <a href="https://github.com/Yashk29/Robo-Hand" target="_blank"> <!-- Replace with the actual URL -->
+                        <img src="ironman logo.png" alt="Project 1">
+                    </a><!-- Replace with actual path -->
                     <h3>Robo Arm</h3>
                     <p>Developed a robotic arm controlled by hand gestures using OpenCV, Python, and Arduino Mega,
                         highlighting my expertise in robotics and computer vision.</p>
                 </div>
                 <div class="project" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="https://github.com/Yashk29/Traffic_Guardian" target="_blank">
                     <img src="captain america.png" alt="Project 2"> <!-- Replace with actual path -->
+                    </a>
                     <h3>Traffic Guardian</h3>
                     <p>Advanced to the finals at IIT Mandi's "Code for Good" hackathon with TrafficGuardian, using YOLO
                         for traffic management, demonstrating my problem-solving and AI capabilities.</p>
                 </div>
                 <div class="projects-grid">
                     <div class="project" data-aos="zoom-in">
+                        <a href="https://github.com/Yashk29/Edu_indian-web" target="_blank">
                         <img src="thorjr.png" alt="Project 3"> <!-- Replace with actual path -->
+                    </a>
                         <h3>EduIndian</h3>
                         <p>Created a website to provide professional skills information using HTML and CSS, bridging the
                             gap between academic education and industry needs.</p>
                     </div>
                     <div class="projects-grid">
                         <div class="project" data-aos="zoom-in">
+                            <a href="https://github.com/Yashk29" target="_blank">
                             <img src="spiderman.png" alt="Project 4"> <!-- Replace with actual path -->
+                            </a>
                             <h3>Diesese Detector</h3>
                             <p>Developed a disease detection system using Python libraries and Flask, showcasing my
                                 integration skills in machine learning and web development.</p>
@@ -113,10 +121,10 @@
         </section>
         <section id="contact" data-aos="fade-up">
             <h2 class="thunder-effect">Contact Me</h2>
-            <form class="contact-form"action="/process" method="post">
+            <form class="contact-form" action="/process" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message"  name="data" required placeholder="Your Message" required></textarea>
+                <textarea name="message" name="data" required placeholder="Your Message" required></textarea>
                 <button type="submit" value="Submit" class="contact-button">Send Message</button>
             </form>
         </section>
@@ -226,55 +234,55 @@
 
 
     </script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js">
-   // Function to trigger thunder effect
-function triggerThunder() {
-    anime({
-        targets: '.thunder-effect',
-        scale: [1, 1.2, 1], // Scale effect
-        opacity: [1, 0.5, 1], // Flashing effect
-        duration: 500, // Duration of the effect
-        easing: 'easeInOutQuad',
-        loop: false // Do not loop the effect
-    });
-}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js">
+        // Function to trigger thunder effect
+        function triggerThunder() {
+            anime({
+                targets: '.thunder-effect',
+                scale: [1, 1.2, 1], // Scale effect
+                opacity: [1, 0.5, 1], // Flashing effect
+                duration: 500, // Duration of the effect
+                easing: 'easeInOutQuad',
+                loop: false // Do not loop the effect
+            });
+        }
 
-// Trigger thunder effect on page load or on an event
-window.onload = function() {
-    triggerThunder(); // Trigger thunder effect on page load
-};
+        // Trigger thunder effect on page load or on an event
+        window.onload = function () {
+            triggerThunder(); // Trigger thunder effect on page load
+        };
 
-// Alternatively, you can trigger the effect on a click
-document.body.addEventListener('click', triggerThunder);
+        // Alternatively, you can trigger the effect on a click
+        document.body.addEventListener('click', triggerThunder);
 
-     </script>
-   
-   <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent form from submitting the default way
-  
-      const formData = new FormData(this);
-      
-      fetch('save_form.php', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.text())
-      .then(data => {
-        alert(data); // Display success message
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-    });
-    document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript is working!');
-});
+    </script>
 
-  </script>
-  
-    
-     
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from submitting the default way
+
+            const formData = new FormData(this);
+
+            fetch('save_form.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data); // Display success message
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('JavaScript is working!');
+        });
+
+    </script>
+
+
+
     <script src="script.js"></script>
 </body>
 
